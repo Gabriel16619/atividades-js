@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Tabuada</title>
+</head>
+<body>
+    <input  type="text" id="Numero" placeholder="Digite um numero">
+   <button onclick="mostrarResultado()">Exibir</button>
+    <script>
+        function mostrarResultado(){
+
+        }
+        let numero1 = document.getElementById("Numero").value 
+        let multiplicador = 0
+        
+        while(multiplicador <= 10){
+            let resultado = numero1 * multiplicador
+            console.log(`${numero1} x ${multiplicador} = ${resultado}`)
+            multiplicador++
+}
+    </script>
+</body>
+</html>
