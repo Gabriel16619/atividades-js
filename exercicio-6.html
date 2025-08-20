@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Teste</title>
 </head>
 <body>
-    <input  type="text" id="Numero" placeholder="Digite um numero">
-   <button onclick="mostrarResultado()">Exibir</button>
-    <script>
-        function mostrarResultado(){
-
-        }
-        let numero1 = document.getElementById("Numero").value 
-        let multiplicador = 0
+    <title>Tabuada</title>
+<body>
+    <div class="tela">
+        <div class="Titulo"><h1>Tabuada</h1></div>    
+        <input type="number" id="Numero" placeholder="Digite um número">
+        <button onclick="mostrarResultado()">Exibir</button>
         
-        while(multiplicador <= 10){
-            let resultado = numero1 * multiplicador
-            console.log(`${numero1} x ${multiplicador} = ${resultado}`)
-            multiplicador++
-}
+        <div id="resultado"></div>
+    </div> 
+
+    <script>
+        function mostrarResultado() {
+            let numero1 = Number(document.getElementById("Numero").value);
+            let multiplicador = 0;
+            let saida = "";
+
+            while (multiplicador <= 10) {
+                let resultado = numero1 * multiplicador;
+                saida += `${numero1} x ${multiplicador} = ${resultado}<br>`;
+                multiplicador++;
+            }
+
+            // Exibe no HTML (não só no console)
+            document.getElementById("resultado").innerHTML = saida;
+        }
     </script>
 </body>
 </html>
